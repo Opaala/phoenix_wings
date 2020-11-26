@@ -65,36 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(
-        children: <Widget>[
-          Flexible(
-            child: ListView.builder(
-              reverse: true,
-              itemBuilder: (BuildContext context, int index) {
-                final message = messages[index];
-                return Card(
-                    child: Column(
-                  children: <Widget>[
-                    ListTile(
-                        leading: Icon(Icons.message),
-                        title: Text(message.text),
-                        subtitle: Text(message.time)),
-                  ],
-                ));
-              },
-              itemCount: messages.length,
-            ),
-          ),
-          Divider(
-            height: 1.0,
-          ),
-          Container(
-              child: MessageComposer(
-            textController: _textController,
-            sendMessage: _sendMessage,
-          ))
-        ],
-      ),
+      body: Container(),
     );
   }
 }
@@ -113,23 +84,6 @@ class MessageComposer extends StatelessWidget {
 
   MessageComposer({this.textController, this.sendMessage});
   build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.symmetric(horizontal: 8.0),
-        child: Row(
-          children: <Widget>[
-            Flexible(
-              child: TextField(
-                  controller: textController,
-                  onSubmitted: sendMessage,
-                  decoration:
-                      InputDecoration.collapsed(hintText: "Send a message")),
-            ),
-            Container(
-              child: IconButton(
-                  icon: Icon(Icons.send),
-                  onPressed: () => sendMessage(textController.text)),
-            )
-          ],
-        ));
+    return Container();
   }
 }
