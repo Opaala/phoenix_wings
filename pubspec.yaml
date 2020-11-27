@@ -1,8 +1,11 @@
 name: phoenix_wings
 description: Phoenix Channel client for Dart
-version: 0.2.1
-author: mfeckie<mfeckie@gmail.com>
-homepage: https://github.com/mfeckie/phoenix_wings
+version: 0.3.0
+authors:
+  - Loic Tosser <loic@kalvad.com>
+  - Emilien Roussel <emilien@kalvad.com>
+  - Emilmfeckie<mfeckie@gmail.com>
+homepage: https://github.com/Opaala/phoenix_wings
 
 dev_dependencies:
   dartdoc: "0.37.0"
